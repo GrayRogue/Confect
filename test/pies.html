@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="reset.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Cuprum|Open+Sans+Condensed:300|Yanone+Kaffeesatz" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="script/jquery.blueberry.js"></script>
+<link rel="stylesheet" href="blueberry.css" />
+<link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
+<script defer src="script/jquery.flexslider.js"></script>
+
+<!-- Syntax Highlighter -->
+  <script type="text/javascript" src="js/shCore.js"></script>
+  <script type="text/javascript" src="js/shBrushXml.js"></script>
+  <script type="text/javascript" src="js/shBrushJScript.js"></script>
+
+  <!-- Optional FlexSlider Additions -->
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/demo.js"></script>
+
+<script>
+$(window).load(function() {
+	$('.blueberry').blueberry();
+});
+</script>
+<script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+<script>
+$(function() {
+  var pull    = $('#pull');
+    menu    = $('#menu ul');
+    menuHeight  = menu.height();
+ 
+  $(pull).on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle();
+  });
+});
+	
+$(window).resize(function(){
+  var w = $(window).width();
+  if(w > 320 && menu.is(':hidden')) {
+    menu.removeAttr('style');
+  }
+}); 
+	</script>
+<title>Кондитерская KappaPride</title>
+</head>
+<body>
+
+<div id="headerInner">
+	<div id="header">
+			<div id="logo_img">
+				<a href="index.php"><img src="image/logo.png" title="Вернуться на главную"></a>				
+			</div>
+			<div id="header_name">
+				<span id="name">Кондитерская KappaPride</span><br>
+				<span id="slogan">Наша выпечка самая свежая!</span><br>				
+				<span id="header_contacts"><a href="tel: +7(863)60-25-25">&#9742; +7(863)60-25-25</a><br>
+					Работаем с 9:00 до 18:00</span>
+			</div>
+			<div id="cart">
+				<a href="cart.php"><img src="image/cart.png"> 
+				<div id="cart_count">
+					10
+				</div><span id="cart_price">К оплате:<br> 1200 &#x20bd;</span></a>
+			</div>
+		<div id="menu">					
+				<ul class="clearfix">
+					<li><a href="#">На главную</a></li> 
+					<li><a href="#">Пирожные</a></li>
+					<li><a href="#">Печенье</a></li>
+					<li><a href="#">Пряники</a></li>
+					<li><a href="#">Вафли</a></li> 
+					<li><a href="#">Торты</a></li>
+				</ul>
+				<a href="#" id="pull">Меню</a>
+			</div>
+	</div>
+</div>
+	
+<script src="jquery.spinner.js"></script>
+<script>
+$("#spinner")
+  .spinner('delay', 200) //delay in ms
+  .spinner('changed', function(e, newVal, oldVal) {
+    // trigger lazed, depend on delay option.
+  })
+  .spinner('changing', function(e, newVal, oldVal) {
+    // trigger immediately
+  });
+</script>
+	
+<!-- начало врапер -->
+<div id="wrapper">
+	<div id="middle">
+		<div id="content">
+			<div class="tovar_block">
+				<div class="tovar_pic">
+					<img src="tovarspictures/zavarnyye-pirozhnyye-s-kremom-i-shokoladnym-sousom.jpg" />
+				</div>
+				<div class="tovar_info">
+					<div class="tovar_title">
+						<p>Заварные пирожные</p>
+					</div>
+					<div class="tovar_desc">
+						<p>Классические пирожные с кремом и шоколадным соусом</p>
+					</div>
+					<div class="tovar_product_info">
+						<div class="product_keep">
+							<p>606 кКалл | 150 гр.</p>
+						</div>
+						<div class="product_price">
+							<p>250 &#x20bd;</p>
+						</div>
+					</div>
+					<div class="tovar_controls" data-trigger="spinner">
+						<div class="cart_count">
+							<div class="add_block">
+								<input class="add_to_cart" type="submit" value="Заказать">
+							</div>	
+							<div>
+								  <input type="text" class="count_txt" value="1" data-max = "100" data-min = "1"  data-ruler="quantity">
+							</div>										
+						</div>
+						<div class="btns">
+							<button class="count_btn_plus"  type="button" data-spin="up"></button>
+							<button class="count_btn_minus" type="button" data-spin="down"></button>
+						</div>
+					</div>
+				</div>				
+			</div>			
+		</div><!-- Конец контент -->		
+	</div><!-- Конец мидл -->
+</div><!-- Конец врапер -->
+<div id="footer">	
+	<div id="footer2">	
+			<div id="contacts_footer">
+				<ul>
+					<li><b>Связь с нами:</b></li>
+					<li><a href="tel: +7(863)60-25-25">&#9742; +7(863)60-25-25</a></li>
+					<li><a href="tel: +7 (961) 260-25-25">&#9990; +7(961)260-25-25</a></li>					
+					<li><a href="mailto:KP@mail.ru">&#9993; KP@mail.ru</a></li>
+				</ul>
+			</div>
+
+			<div id="social_footer">
+				<ul>
+					<b>Социальные сети:</b><br>
+					<li><a href="https://vk.com/"><img src="image/social_footer/1_07.png"></a></li>
+					<li><a href="https://facebook.com/"><img src="image/social_footer/1_09.png"></a></li>
+					<li><a href="https://www.instagram.com"><img src="image/social_footer/1_05.png"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
